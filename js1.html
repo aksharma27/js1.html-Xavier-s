@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript1</title>
+    <!-- <link rel="stylesheet" href="js1.css"> -->
+    <style>
+        h1 {
+            display: inline;
+            padding: 40% 35%;
+            /* margin: 4% 4%; */
+            text-decoration: underline;
+        }
+
+
+        .btn {
+            cursor: pointer;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            height: 3rem;
+            width: 140px;
+            margin: 7rem 1rem;
+            padding: 9px 33px;
+            border-radius: 5px;
+        }
+
+        .but {
+            margin: -40px 7px;
+            padding: 45px 626px;
+        }
+
+        .container {
+            padding: 12rem 4rem;
+        }
+    </style>
+</head>
+
+<body onload="loadfun()">
+    <div class="container">
+        <header>
+            <h1>JavaScript Event Handeling</h1>
+        </header>
+        <div class="but">
+            <button id="enter" class="btn" onclick="enter()">Enter</button>
+            <button id="redirect" class="btn" onclick="redirect()">Redirect</button>
+        </div>
+    </div>
+
+    <script>
+        // Onload function
+        let now = new Date();
+        function loadfun() {
+            alert("Page is loading at " + now);
+            document.body.style.backgroundColor = "aqua";
+        }
+
+
+        // Enter button Onclick function
+        function enter() {
+            let fname = prompt("Enter your first name ", "Abhi");
+            let lname = prompt('Last name');
+            let by = prompt('Enter your birth year');
+            let cy = prompt('Enter current year');
+            let age = cy - by;
+            let check = confirm("Your age is " + age);
+            if (age < 15) {
+                out = alert("Sorry! You are not eligible to enter");
+            }
+            else {
+                mes = alert("Welcome! " + fname + " " + lname + " to our Web Page");
+            }
+            let datetime = new Date;
+            let outro = alert("You visit  our Web Page at " + datetime)
+        }
+
+
+        // Redirect button Onclick function
+        function redirect() {
+            display = alert("Hello, Have a good day!");
+            let ask = confirm("Do You Want to Visit St.Xavier's College Website")
+            if (ask) {
+                window.location.href = 'https://www.sxccal.edu/';
+            }
+        else {
+
+        }
+        }
+    </script>
+</body>
+
+</html>
